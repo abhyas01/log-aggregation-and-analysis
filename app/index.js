@@ -92,7 +92,7 @@ app.use(
   pinoHttp({
     logger,
     genReqId: (req) => req.headers["x-request-id"] || uuid(),
-    customLogLevel: (res, err) => {
+    customLogLevel: (_, res, err) => {
       if (err || res.statusCode >= 500) return "error";
       if (res.statusCode >= 400) return "warn";
       return "info";
