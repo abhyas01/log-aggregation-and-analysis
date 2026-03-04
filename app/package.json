@@ -1,0 +1,11 @@
+{
+  "name": "log-demo-node",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.19.2",
+    "pino": "^9.0.0",
+    "pino-http": "^10.0.0",
+    "uuid": "^9.0.1"
+  }
+}
