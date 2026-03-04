@@ -50,3 +50,11 @@ In Kibana you can:
 * search logs
 * filter by fields (e.g., `route`, `statusCode`)
 * visualize request and error activity
+
+## Log Flow
+
+![req.log.info({ ... }) -> Pino builds JS object -> Pino converts to JSON string -> Pino calls write(jsonString) -> write() sends jsonString to socket -> Logstash receives JSON lines -> Elasticsearch indexes](images/log-flow.png)
+
+## App Architecture Flow (ELK Stack)
+
+![App -> Logstash -> Elasticsearch -> Kibana](images/ELK-architecture.png)
